@@ -54,7 +54,7 @@ Using ansible
 change directory into users folder
 For the ansible playbooks, the command is as follows:
 
-`$ cd users`
+`$ cd users`  
 `$ ansible-playbook yaml_file.yml --private-key=/path/to/file/key.pem`
 
 The host(s) that the tasks should run on will need to be added to the the inventory file.  
