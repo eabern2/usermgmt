@@ -57,11 +57,10 @@ change directory into users folder
 
 - add user - create_users.yml
 To add users on the host, edit the create_users.yml file by adding the users name under 'loop:' of the file.  
- loop:  
-        - { name: 'user1', comment: 'User One' }  
-        - { name: 'user2', comment: 'User Two' }  
-        - { name: 'user3', comment: 'User Three' }  
-        - { name: 'user4', comment: 'User Four' }
-        
+ ![loop](https://github.com/eabern2/usermgmt/blob/master/images/loop.png)
+ 
 - remove user - remove_users.yml
+To delete users on the host, edit the remove_users.yml file by adding the users names under 'loop:' of the file.  
+ ![loop2](https://github.com/eabern2/usermgmt/blob/master/images/loop2.png)
+ 
 - list users - list_users.yml
