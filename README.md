@@ -57,13 +57,15 @@ For the ansible playbooks, the command is as follows:
 `$ cd users`
 `$ ansible-playbook yaml_file.yml --private-key=/path/to/file/key.pem`
 
-The host(s) that the tasks should run on will need to be added to the the inventory folder.  
+The host(s) that the tasks should run on will need to be added to the the inventory file.  
 For example:
  ![hosts](https://github.com/eabern2/usermgmt/blob/master/images/hosts.png)
  
 - add user - create_users.yml
 To add users on the host, edit the create_users.yml file by adding the users name under 'loop:' of the file.  
  ![loop](https://github.com/eabern2/usermgmt/blob/master/images/loop.png)
+
+To change the group id or the default password, when adding a user, modify the variable values in /users/group_vars/ec2 file.
  
 - remove user - remove_users.yml
 To delete users on the host, edit the remove_users.yml file by adding the users names under 'loop:' of the file.  
