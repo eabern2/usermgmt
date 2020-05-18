@@ -45,16 +45,22 @@ All python scripts have a usage description for the arguments required.  The usa
     -k PUB_KEY_PATH_FILE  file path and name, to the key   
 
 Example:  
-`$ python3 add.py -u=ec2-user -n=hostname.com -k=/Users/nico/Desktop/virginia.pem -a=eabern2 -c='Erica Abernathy' -i=601 -g=10`
+`$ python3 add.py -u=ec2-user -n=hostname.com -k=/path/to/file/key.pem -a=eabern2 -c='Erica Abernathy' -i=601 -g=10`
 
 
 Using ansible
 =============
 
 change directory into users folder
+For the ansible playbooks, the command is as follows:
+
 `$ cd users`
 `$ ansible-playbook yaml_file.yml --private-key=/path/to/file/key.pem`
 
+The host(s) that the tasks should run on will need to be added to the the inventory folder.  
+For example:
+ ![hosts](https://github.com/eabern2/usermgmt/blob/master/images/hosts.png)
+ 
 - add user - create_users.yml
 To add users on the host, edit the create_users.yml file by adding the users name under 'loop:' of the file.  
  ![loop](https://github.com/eabern2/usermgmt/blob/master/images/loop.png)
