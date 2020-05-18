@@ -11,9 +11,7 @@ def sshConnect(args):
 		pkey = paramiko.RSAKey.from_private_key_file(args.pub_key_path_file) )
 	
 	stdin, stdout, stderr = ssh.exec_command('{} {}'.format(command, addition), bufsize=-1, timeout=None, get_pty=False)
-
-	print(stdout.read())
-	print(stdout.read())
+	print(stderr.read())
 
 	ssh.close()
 
